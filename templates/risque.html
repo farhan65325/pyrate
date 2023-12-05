@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen bg-zinc-900">
+
+{% include 'nav.html' %}
+
+
+<div class="flex justify-center py-10">
+    <table class="w-full divide-y divide-gray-200 mx-20">
+        <thead class="bg-zinc-900">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Risque Pays</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2022</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2021</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2020</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2019</th>
+            </tr>
+        </thead>
+        <tbody class="bg-zinc-900 divide-y divide-zinc-700">
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">France</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">50</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">50</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">USA</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">50</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">25</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">50</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">25</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Japon</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">50</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">25</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">25</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">25</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="flex justify-center py-10">
+    <table class="w-full divide-y divide-gray-200 mx-20">
+        <thead class="bg-zinc-900">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Risque sectoriel</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2022</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2021</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2020</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2019</th>
+            </tr>
+        </thead>
+        <tbody class="bg-zinc-900 divide-y divide-zinc-700">
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">LVMH</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">100</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">100</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">100</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">100</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">L'Oréal</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">100</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">100</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">100</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Airbus</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">100</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Boeing</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Total</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Exxon Mobil</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">50</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">50</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Ford</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Toyota</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">75</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>

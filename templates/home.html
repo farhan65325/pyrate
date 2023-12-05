@@ -1,0 +1,105 @@
+<div class="grid grid-cols-3 gap-4 text-white m-5">
+    <!-- First Column: Logo -->
+    <div class="col-span-1 flex items-center justify-center text-center content-center items-center">
+        <img src="/static/logo.png" alt="Logo" width="40%">
+    </div>
+
+    <!-- Second Column: Mini Form -->
+    <div class="col-span-1 text-right content-center items-center m-auto">
+        <form method="POST">
+            <div class="grid grid-cols-2 gap-4">
+                <div>Entreprise</div>
+                <div class="select">
+                    <select name="company">
+                        <option selected disabled>Entreprise</option>
+                        <option value="airbus">Airbus</option>
+                        <option value="boeing">Boeing</option>
+                        <option value="ford">Ford</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="exxon">Exxon Mobil</option>
+                        <option value="total">Total Énergie</option>
+                        <option value="oreal">L'Oréal</option>
+                        <option value="lvmh">LVMH</option>
+                    </select>
+                </div>
+                <div>Année</div>
+                <div class="select">
+                    <select name="year">
+                        <option selected disabled>Année</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                    </select>
+                </div>
+            </div>
+            <div class="text-center content-center items-center mt-4">
+                <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-full"
+                    name="submit_form">
+                    Noter
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Third Column: "Please choose blabla" -->
+    <div class="col-span-1 flex flex-col items-center justify-center text-center content-center items-center m-auto">
+        {% if industry %}
+        <img src="/static/{{company|lower}}.png" alt="Logo" width="60%">
+        {% else %}
+        <p class="text-slate-400">Veuillez choisir une entreprise et une année pour afficher une note.</p>
+        {% endif %}
+    </div>
+</div>
+
+
+<style>
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        outline: 0;
+        box-shadow: none;
+        border: 0 !important;
+        background: #5c6664;
+        background-image: none;
+        flex: 1;
+        padding: 0 .5em;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1em;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    .select {
+        position: relative;
+        display: flex;
+        width: 20em;
+        height: 3em;
+        line-height: 3;
+        background: #5c6664;
+        overflow: hidden;
+        border-radius: .25em;
+    }
+
+    .select::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background: #2b2e2e;
+        cursor: pointer;
+        pointer-events: none;
+        transition: .25s all ease;
+    }
+
+    .select:hover::after {
+        color: #23b499;
+    }
+</style>

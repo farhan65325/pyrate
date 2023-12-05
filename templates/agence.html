@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen bg-zinc-900">
+{% include 'nav.html' %}
+
+<div class="flex justify-center py-10">
+    <table class="w-full divide-y divide-gray-200 mx-20">
+        <thead class="bg-zinc-900">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Indicateur</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Moody's</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    S&P</th>
+            </tr>
+        </thead>
+        <tbody class="bg-zinc-900 divide-y divide-zinc-700">
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Meilleure qualité, solvabilité maximale</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aaa</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">AAA</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Haute qualité</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">AA+</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">AA</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa3</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">AA-</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Qualité moyenne supérieur</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A3</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A-</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Qualité moyenne inférieure</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Baa1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BBB+</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Baa2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BBB</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Baa3</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BBB-</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Spéculatif</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Ba1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BB+</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Ba2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BB</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Ba3</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BB-</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Très spéculatif</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">B1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">B+</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">B2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">B</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">B3</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">B-</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A haut risque</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Caa1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">CCC+</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Ultra spéculatif</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Caa2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">CCC</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">En défaut, quelques espoirs</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Caa3</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">CCC-</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Ca</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">CC</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">En défaut sélectif</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">SD</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">En défaut</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white"></td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">D</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+<h1 class="text-4xl text-white text-center my-5">Notation S&P</h1>
+
+
+<div class="flex justify-center py-10">
+    <table class="w-full divide-y divide-gray-200 mx-20">
+        <thead class="bg-zinc-900">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Secteur</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Entreprise</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2022</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2021</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2020</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2019</th>
+            </tr>
+        </thead>
+        <tbody class="bg-zinc-900 divide-y divide-zinc-700">
+            <tr class="bg-zinc-800">
+                <td rowspan="2" class="px-6 py-4 whitespace-nowrap text-sm text-white">Aeronautique</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Airbus</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">N/A</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Boeing</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BBB-</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BBB</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BBB</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A-</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td rowspan="2" class="px-6 py-4 whitespace-nowrap text-sm text-white">Automobile</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Ford</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BB+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BB+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BB+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">BBB-</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Toyota</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td rowspan="2" class="px-6 py-4 whitespace-nowrap text-sm text-white">Energie</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Exxon Mobil</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">AA-</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">AA</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">AA+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">AA+</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Total Energie</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td rowspan="2" class="px-6 py-4 whitespace-nowrap text-sm text-white">Luxe</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">L'oreal</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">AA</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">N/A</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">N/A</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">N/A</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">LVMH</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">AA-</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A+</td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+
+
+
+
+
+
+<h1 class="text-4xl text-white text-center my-5">Notation Moody's</h1>
+
+<div class="flex justify-center py-10">
+    <table class="w-full divide-y divide-gray-200 mx-20">
+        <thead class="bg-zinc-900">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Company</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2022</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2021</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2020</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    2019</th>
+            </tr>
+        </thead>
+        <tbody class="bg-zinc-900 divide-y divide-zinc-700">
+            <tr class="bg-zinc-800">
+                <td rowspan="2" class="px-6 py-4 whitespace-nowrap text-sm text-white">Aeronautique</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Airbus</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">N/A</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Boeing</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">baa2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">baa2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">baa2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A3</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td rowspan="2" class="px-6 py-4 whitespace-nowrap text-sm text-white">Automobile</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Ford</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">ba1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">ba2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">ba2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">ba1</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Toyota</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">N/A</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td rowspan="2" class="px-6 py-4 whitespace-nowrap text-sm text-white">Energie</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Exxon Mobil</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aaa</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Total Energie</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">A1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa3</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa3</td>
+            </tr>
+            <tr class="bg-zinc-800">
+                <td rowspan="2" class="px-6 py-4 whitespace-nowrap text-sm text-white">Luxe</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">L'oreal</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">N/A</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">N/A</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">N/A</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">LVMH</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Aa1</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+</body>
+
+</html>

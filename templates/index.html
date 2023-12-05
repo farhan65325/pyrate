@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+{% if indics %}
+<div class="h-full bg-zinc-900">
+{% else %}
+<div class="h-screen bg-zinc-900">
+{% endif %}
+{% include 'nav.html' %}
+{% include 'home.html' %}
+{% if error %}
+    <div class="text-white m-5 text-center content-center items-center">
+        {{error}}
+    </div>
+{% endif %}
+
+{% if indics %}
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+<div class="flex justify-around text-white text-center text-9xl">
+    <div>
+        <p>{{company}}</p>
+        <p style="font-size: 20px;color: rgb(128, 128, 128);">Activité : {{industry}}</p>
+        <p style="font-size: 20px;color: rgb(128, 128, 128);">Devise : {{currency}} </p>
+    </div>
+    <div>{{year}}</div>
+<div style="color:
+    {% if mba_rating == 'A+' %} green;
+    {% elif mba_rating == 'A' %} limegreen;
+    {% elif mba_rating == 'A-' %} yellowgreen;
+    {% elif mba_rating == 'B+' %} yellow;
+    {% elif mba_rating == 'B' %} orange;
+    {% elif mba_rating == 'B-' %} darkorange;
+    {% else %} red;
+    {% endif %}">
+    {{ mba_rating }}
+</div>
+
+</div>
+
+
+<div class="flex justify-center py-10">
+    <table class="w-full divide-y divide-gray-200 mx-20">
+        <thead class="bg-zinc-900">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Indicateur</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    PyRate Rating</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    S&P</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Moody's</th>
+            </tr>
+        </thead>
+        <tbody class="bg-zinc-900 divide-y divide-zinc-700">
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Note</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">{{ mba_rating }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">{{ sp_rating }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">{{ moodys_rating }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+
+
+    <h1 class="text-4xl text-white text-center my-10">Principaux indicateurs</h1>
+    <div class="flex justify-center" >
+    <table class="w-full divide-y divide-gray-200 mx-20">
+        <thead class="bg-zinc-900">
+            <tr>
+                {% if indics %}
+                {% for key in indics[0].keys() %}
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    {{ key }}
+                </th>
+                {% endfor %}
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody class="bg-zinc-900 divide-y divide-zinc-700">
+            <!-- Iterate over the JSON data to create table rows -->
+            {% for item in indics %}
+            <tr class="{% if loop.index is odd %}bg-zinc-800{% else %}bg-zinc-900{% endif %}">
+                {% for value in item.values() %}
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">
+                    {{ value if value is not none else 'N/A' }}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endif %}
+
+
+
+{% if quant_indics %}
+<h1 class="text-4xl text-white text-center my-10">Principaux ratios</h1>
+<div class="flex justify-center">
+    <table class="w-full divide-y divide-gray-200 mx-20">
+        <thead class="bg-zinc-900">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Ratio</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Value</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Points</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Pondérations des indicateurs</th>
+            </tr>
+        </thead>
+        <tbody class="bg-zinc-900 divide-y divide-zinc-700">
+            <!-- Iterate over the dictionary to create table rows -->
+            {% for key, details in quant_indics.items() %}
+            <tr class="{% if loop.index is odd %}bg-zinc-800{% else %}bg-zinc-900{% endif %}">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">{{ key }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">{{ details.value if details.value is not none
+                    else 'N/A' }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">{{ details.points }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">{{ details.weight }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+{% if quant_sum %}
+<h1 class="text-4xl text-white text-center my-5">Somme des points quantitatifs</h1>
+<p class="text-white text-center ">{{quant_sum}}</p>
+{% endif %}
+
+
+{% if qual_indics %}
+<h1 class="text-4xl text-white text-center my-10">Risques</h1>
+<div class="flex justify-center">
+    <table class="w-full divide-y divide-gray-200 mx-20">
+        <thead class="bg-zinc-900">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Indicateur</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Note</th>
+            </tr>
+        </thead>
+        <tbody class="bg-zinc-900 divide-y divide-zinc-700">
+            <!-- Iterate over the qualitative indicators tuple -->
+            <tr class="bg-zinc-800">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Risque pays</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">{{ qual_indics.0 }}</td>
+            </tr>
+            <tr class="bg-zinc-900">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Risque secteur</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">{{ qual_indics.1 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h1 class="text-4xl text-white text-center my-5">Somme des points qualitatifs</h1>
+<p class="text-white text-center">{{qual_sum}}</p>
+
+<h1 class="text-6xl text-white text-center my-10">Résultats</h1>
+
+<h1 class="text-4xl text-white text-center my-5">Nombre de points obtenus</h1>
+<p class="text-white text-center">{{nb_points}}</p>
+
+<h1 class="text-4xl text-white text-center my-5">Note finale</h1>
+<p class="text-white text-center">{{final_points}}</p>
+
+
+
+
+
+{% endif %}
+
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
